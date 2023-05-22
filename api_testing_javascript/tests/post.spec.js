@@ -16,7 +16,7 @@ describe('Post requests', () => {
     it('form request/response', (done) => {
         request(app)
             .post('/test3/course')
-            .send('name=supertest')
+            .send('name=supertest') // .send('name=supertest&type=post&status=active')
             .set('Accept', 'application/x-www-form-urlencoded')
             .expect(200, { "id": "2", "name": "supertest" }, done);
     })

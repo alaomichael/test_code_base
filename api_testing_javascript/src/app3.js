@@ -21,6 +21,7 @@ app3.get('/test3/course/:id', (req, res) => {
 
 app3.post('/test3/course', (req, res) => {
     let name = req.body.name;
+    console.log('name ',name)
     res.json({ id: '2', name: name })
 })
 
